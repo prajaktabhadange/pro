@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio -Dell Technologies</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 26px;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .menu a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .section-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 40px;
+      border-radius: 15px;
+      width: 85%;
+      max-width: 1000px;
+    }
+
+    h1, h2 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    ul, p {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.8;
+      text-align: left;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+ 
+    #home {
+	     background-image: url('https://www.slideteam.net/media/catalog/product/cache/1280x720/d/e/dell_company_profile_powerpoint_presentation_slides_cp_cd_slide01.jpg');
+    }
+	#departments
+	{
+		background-image: url('data:image/jpeg;base64,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');
+	}
+
+    #mission
+	{
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP16AkufRa0KRNoHV2eKAcU3DEuGnf3_luaw&s');
+    }
+
+    #projects {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9hpODjjMggmKgGoAzmCxUei55iMJJ7SPH0g&s');
+    }
+
+    #achievements {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZewN88P9dvmyA4m7cHLUai-B6ap_c_xDOYA&s');
+    }
+
+    #contact {
+      background-image: url('https://www.slideegg.com/image/webpv2/670/23496-contact-us-powerpoint-template-670.webp');
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .menu a {
+        display: block;
+        margin: 10px 0;
+      }
+      .section-content {
+        width: 95%;
+        padding: 20px;
+		align:center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Portfolio</div>
+    <div class="menu">
+      <a href="#home">Home</a>
+	  <a href="#departments">Departments</a>
+      <a href="#mission">Mission</a>
+	  <a href="#projects">Projects</a>
+      <a href="#achievements">Achievements</a>
+     <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <div class="section-content">
+      <h1>Welcome to Dell Technology</h1>
+<p>A non-Governmental Organisation (NGO)</p>
+	 
+    </div>
+  </section>
+
+  <section id="departments">
+    <div class="section-content">
+      <h2>Our Departments</h2>
+      <center><ul type="circle">
+        <li><strong>T Infrastructure & Cloud Solutions</strong> </li>
+        <li><strong>storage systems</strong></li>
+		<li><strong>virtualization</strong></li>
+		<li><strong>enterprise-grade server deployment</strong></li>
+		<li><strong>cloud infrastructure</strong></li>
+      </ul></center>
+    </div>
+  </section>
+
+  <section id="mission">
+    <div class="section-content">
+      <h2>Mission</h2>
+      <ul>
+        <li>To promote environmental awarness.</li>
+        <li>sustainable living.</li>
+		  <li>ecological conservation through education</li>
+		  <li>community involvement</li>
+        <li>Action-driven Programs</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-content">
+      <h2>Projects</h2>
+      <ul type="square">
+        <li><strong>
+			To design, implement, and manage reliable and scalable IT solutions using
+			Dell Technologies'infrastructure to enhance performance, 
+		data protection, and business continuity.</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="section-content">
+      <h2>Achievements</h2>
+      <ul>
+        <li><strong>Successfully deployed a Dell EMC storage system in a simulated enterprise setup.
+		   Completed virtualization of physical servers using Dell PowerEdge with VMware ESXi.
+		   Participated in a workshop on Dell APEX Cloud Services.Earned Dell Technologies Proven Professional
+		   Certification (DCA).
+		   Designed a mock hybrid cloud model integrating on-prem Dell hardware with cloud-based workloads.
+</strong></li>
+       
+      </ul>
+ 
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-content">
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Phone:</strong> +91 123 4567 9043</li>
+        <li><strong>Email:</strong> delltechnologies@gmail.com</li>
+        
+      </ul>
+	  <br><br><br>
+      <p>"Engineering excellence with Dell at the core."</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025  Dell Technology  . All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
